@@ -64,7 +64,7 @@ Resources:
       Targets: 
         - 
           Arn: 
-            Ref: "MySNSTopic"
+          Ref: "MySNSTopic"
           Id: "PipelineNotificationTopic"
           InputTransformer:
             InputTemplate: '"The Pipeline <pipeline> has failed. Go to https://console.aws.amazon.com/codepipeline/home?region=us-east-1#/view/<pipeline>" '
@@ -168,8 +168,8 @@ Resources:
       Description: Build application
       ServiceRole:
         Fn::GetAtt:
-        - CodeBuildRole
-        - Arn
+          - CodeBuildRole
+          - Arn
       Artifacts:
         Type: no_artifacts
       Environment:
